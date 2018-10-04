@@ -1,39 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Insert Title Here</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- #Makes webpage mobile and tablet responsive. Credit: https://www.w3schools.com/html/html_responsive.asp  -->    
+  <title>CMPUT 401: Shardul Shah's Resume</title>
 
 
   <!-- <link rel="stylesheet" href="style.css"> -->
 
+  <!-- putting styling and making page look visually appealing directly in HTML code using <style> tag -->
+  <style>
+  body
+ {
+   background-color: teal;
+ }
+
+ #name
+ {
+   font-family: Arial;
+   font-size: 2.8em; 
+   color: gold;
+   
+ }
+
+ p
+ {
+   font-family: "Lucida Console";
+   color: gold;
+   font-size: 1.70em;
+ }
+
+ #name_bord
+{
+ border-color: gold;
+}
+
+li
+{
+  color: gold;
+  font-family: "Lucida Console";
+  font-size: 1.00em; 
+}
+
+ol
+{
+  #background: black;
+  #Is this visually appealing? I wonder... I dont think so, so I will comment it out.
+}
+
+#resume_panel
+{
+  display: none;
+  # the actual display has to be none in order for the slideDown animation to actually work. We can also use $(...).hide().slidedown("..."); to have the same effect. Without this, the jQuery SlideDown function is useless. Credit: https://stackoverflow.com/questions/11755841/jquery-slidedown-not-working 
+}
+
+    
+
+#flip
+{
+ text-align: center;
+ #display: inline-block;
+ color: gold;
+ font-family: "Arial";
+ font-size: 2.3em;
+}
+
+  </style>
+ <!--  # Credit to all CSS uses, use of style tag: https://www.w3schools.com/css/ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script>
+  //credit to slideDown JQuery knowledge: https://www.w3schools.com/jquery/jquery_slide.asp
+  // apparently a separate script src="..." tag is needed than the one from your actual JavaScript script tag where you define and write your functions. If this isn't the case, the JavaScript fails to work. You cannot write your JavaScript functions in the same scrpt tag as the src tag. Learned something new. Only took me a hour to figure it out....
+  $(document).ready(function(){
+    $("#flip").click(function(){
+        $("#resume_panel").slideDown(1500);
+    });
+});
+  </script>
 </head>
 
 <body>
+  <div id="flip">
+  Click <u>here</u> to see my resume!
+  </div>
+  <div id="resume_panel">
   <h1 id="name">Name</h1>
-  <p id="about">About</p>
-  <p id="education">Education</p>
-  <p id="skills">Skills</p>
-  <p id="work">Work</p>
-  <p id="contact">Contact</p>
+  <hr id="name_bord">
+  <ol> 
+    <li>  <p id="about">About</p>  </li>
+    <li>  <p id="education">Education</p>  </li>
+    <li>  <p id="skills">Skills</p>  </li>
+    <li>  <p id="work">Work</p>  </li>
+    <li>  <p id="contact">Contact</p>  </li>
+  </ol>
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
   $(window).on('load', function(){
      // change the URL to your server URL here
-     $.getJSON("http://127.0.0.1:8000/api/person/1/", function (data) {
+     $.getJSON("http://162.246.157.117:8000/api/person/1/", function (data) {
           $("#name").text(data.data.attributes.name);
           $("#about").text(data.data.attributes.about);
           $("#education").text(data.data.attributes.education);
           $("#skills").text(data.data.attributes.skills);
-          // Complete consuming the API data and updating the work and contact sections
+          $("#work").text(data.data.attributes.work);
+          $("#contact").text(data.data.attributes.contact); 
+	 // Complete consuming the API data and updating the work and contact sections
           // HINT: look at the above lines, jquery documentation, see what is the object returned
      
      
-
+   
      });
   });
+
   </script>
 </body>
 </html>
