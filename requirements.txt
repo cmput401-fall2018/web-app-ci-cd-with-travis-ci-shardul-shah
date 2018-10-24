@@ -9,3 +9,8 @@ py==1.6.0
 pytest==3.8.1
 pytz==2018.5
 six==1.11.0
+mock==2.0.0
+pbr==5.1.0
+selenium==3.14.1
+six==1.11.0
+urllib3==1.24
