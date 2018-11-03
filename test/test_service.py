@@ -38,7 +38,7 @@ def test_divide(bad_random):
 	assert newService.divide(-10) == -8/10
 
 	try:
-		divide(0)
+		newService.divide(0)
 	except ZeroDivisionError:
 		assert True	
 
