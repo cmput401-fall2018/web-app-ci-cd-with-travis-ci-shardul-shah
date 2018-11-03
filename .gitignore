@@ -104,4 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # nohup
-webresume/nohup.out
+nohup.out
