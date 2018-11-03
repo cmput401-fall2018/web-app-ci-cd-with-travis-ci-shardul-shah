@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
+import os 
 
 # function that finds elements by ID 
 def find_elem(elem_name, driver):
@@ -8,7 +10,13 @@ def find_elem(elem_name, driver):
 
 # the function that tests for each required element
 def test_home():
-	driver = webdriver.Chrome()
+	#driver = webdriver.Chrome() #for Mac OS
+
+	option = Options()
+	option.add_argument("headless")
+	driverPath = os.getcwd() + '/chromedriver'
+	driver = webdriver.Chrome(driverPath, options=option)
+
 	driver.get("http://162.246.157.117:8000/")
 	main_elems = [] 
 	elem_names = ["name", "about", "skills", "milk", "education", "butter", "work", "contact"] # testing list
