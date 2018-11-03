@@ -1,7 +1,6 @@
-from mock import patch
+#from mock import patch
 from service import Service
-
-#check if this is correct with TA/CH/LZ/G
+from unittest.mock import Mock, patch
 
 @patch("service.Service.bad_random")
 def test_bad_random(bad_random):
