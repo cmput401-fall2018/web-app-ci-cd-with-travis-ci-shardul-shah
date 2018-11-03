@@ -2273,3 +2273,324 @@ Traceback (most recent call last):
     return Database.Cursor.execute(self, query, params)
 django.db.utils.OperationalError: no such table: api_person
 [03/Nov/2018 05:14:08] "GET /api/person/1/ HTTP/1.1" 500 20294
+[03/Nov/2018 05:36:22] "GET / HTTP/1.1" 200 3358
+Internal Server Error: /api/person/1/
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: api_person
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/generics.py", line 98, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/generics.py", line 21, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/shortcuts.py", line 93, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 393, in get
+    num = len(clone)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 250, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: api_person
+[03/Nov/2018 05:36:23] "GET /api/person/1/ HTTP/1.1" 500 20320
+[03/Nov/2018 05:36:33] "GET / HTTP/1.1" 200 3358
+Internal Server Error: /api/person/1/
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: api_person
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/generics.py", line 98, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/generics.py", line 21, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/shortcuts.py", line 93, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 393, in get
+    num = len(clone)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 250, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: api_person
+[03/Nov/2018 05:36:33] "GET /api/person/1/ HTTP/1.1" 500 20320
+[03/Nov/2018 05:36:59] "GET / HTTP/1.1" 200 3358
+Internal Server Error: /api/person/1/
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: api_person
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/generics.py", line 98, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/rest_framework/generics.py", line 21, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/shortcuts.py", line 93, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 393, in get
+    num = len(clone)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 250, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: api_person
+[03/Nov/2018 05:37:00] "GET /api/person/1/ HTTP/1.1" 500 20548
+[03/Nov/2018 05:37:27] "GET /admin/ HTTP/1.1" 302 0
+[03/Nov/2018 05:37:28] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[03/Nov/2018 05:37:28] "GET /static/admin/css/base.css HTTP/1.1" 200 16225
+[03/Nov/2018 05:37:28] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[03/Nov/2018 05:37:28] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+[03/Nov/2018 05:37:28] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[03/Nov/2018 05:37:28] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[03/Nov/2018 05:37:28] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 398, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/contrib/auth/views.py", line 61, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/views/generic/edit.py", line 141, in post
+    if form.is_valid():
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/forms/forms.py", line 382, in full_clean
+    self._clean_form()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/forms/forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/contrib/auth/forms.py", line 195, in clean
+    self.user_cache = authenticate(self.request, username=username, password=password)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 73, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/contrib/auth/backends.py", line 16, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 44, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 393, in get
+    num = len(clone)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 250, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/virenv/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: auth_user
+[03/Nov/2018 05:37:29] "POST /admin/login/?next=/admin/ HTTP/1.1" 500 226488
+[03/Nov/2018 05:39:20] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[03/Nov/2018 05:39:22] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1982
+[03/Nov/2018 05:39:22] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[03/Nov/2018 05:39:24] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1982
+[03/Nov/2018 05:39:52] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[03/Nov/2018 05:39:55] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[03/Nov/2018 05:39:56] "GET /admin/ HTTP/1.1" 200 3699
+[03/Nov/2018 05:39:56] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[03/Nov/2018 05:39:56] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[03/Nov/2018 05:39:56] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[03/Nov/2018 05:39:57] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[03/Nov/2018 05:39:58] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+[03/Nov/2018 05:39:58] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[03/Nov/2018 05:39:58] "GET /static/admin/css/base.css HTTP/1.1" 200 16225
+[03/Nov/2018 05:39:58] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[03/Nov/2018 05:39:58] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[03/Nov/2018 05:39:58] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[03/Nov/2018 05:40:00] "GET /admin/api/person/ HTTP/1.1" 200 3160
+[03/Nov/2018 05:40:00] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[03/Nov/2018 05:40:00] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[03/Nov/2018 05:40:00] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[03/Nov/2018 05:40:00] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[03/Nov/2018 05:40:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[03/Nov/2018 05:40:00] "GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+[03/Nov/2018 05:40:00] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+[03/Nov/2018 05:40:00] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+[03/Nov/2018 05:40:00] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[03/Nov/2018 05:40:00] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[03/Nov/2018 05:40:00] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[03/Nov/2018 05:40:02] "GET /admin/ HTTP/1.1" 200 3699
+[03/Nov/2018 05:40:05] "GET /admin/api/person/add/ HTTP/1.1" 200 6442
+[03/Nov/2018 05:40:05] "GET /static/admin/css/forms.css HTTP/1.1" 200 8505
+[03/Nov/2018 05:40:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[03/Nov/2018 05:40:05] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[03/Nov/2018 05:40:05] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[03/Nov/2018 05:40:05] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[03/Nov/2018 05:40:44] "POST /admin/api/person/add/ HTTP/1.1" 302 0
+[03/Nov/2018 05:40:44] "GET /admin/api/person/ HTTP/1.1" 200 4517
+[03/Nov/2018 05:40:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[03/Nov/2018 05:40:44] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[03/Nov/2018 05:40:53] "GET / HTTP/1.1" 200 3358
+[03/Nov/2018 05:40:53] "GET /api/person/1/ HTTP/1.1" 200 240
