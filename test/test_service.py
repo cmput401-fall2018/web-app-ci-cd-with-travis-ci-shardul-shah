@@ -34,8 +34,8 @@ def test_divide(bad_random):
 	assert newService.divide(-2) == -4
 	assert newService.divide(2) == 4
 	
-	assert newService.divide(10) == 0.5
-	assert newService.divide(-10) == -0.5
+	assert newService.divide(10) == 8/10
+	assert newService.divide(-10) == -8/10
 
 	try:
 		divide(0)
